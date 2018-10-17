@@ -1,0 +1,23 @@
+{
+  "name": "comp671-testing-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "cucumber": "^5.0.2"
+  },
+  "scripts": {
+    "test": "cucumber-js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aressler38/comp671-testing-project.git"
+  },
+  "author": "aressler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aressler38/comp671-testing-project/issues"
+  },
+  "homepage": "https://github.com/aressler38/comp671-testing-project#readme"
+}
