@@ -8,6 +8,7 @@
 1. If you use Windows, then install [Cygwin](https://cygwin.com/install.html), otherwise use a terminal emulator of your choice. If you are using Cygwin, then run the setup file and see below how to find and install the `bc` calculator app.
 1. Clone this repo and `cd` into it.
 1. Run `npm install` (requires node).
+1. Run `npm test` to run the cucumber tests.
 
 
 
