@@ -2,7 +2,7 @@
   "name": "comp671-testing-project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/bc.js",
   "dependencies": {},
   "devDependencies": {
     "cucumber": "^5.0.2"
