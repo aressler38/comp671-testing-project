@@ -6,8 +6,8 @@ const {bc} = require('../../src/bc.js');
 
 
 
-Given('a is zero', function () {
-    this.a = 0;
+Given('a is {int}', function () {
+    this.a = int;
 });
 
 Given('b is {int}', function (int) {
