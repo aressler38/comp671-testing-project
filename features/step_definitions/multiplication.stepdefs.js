@@ -6,11 +6,11 @@ const {bc} = require('../../src/bc.js');
 
 
 
-Given('a is 1', function () {
+Given('a is one', function () {
     this.a = 1;
 });
 
-Given('b is 90', function () {
+Given('b is ninty', function () {
     this.b = 90;
 });
 
@@ -21,6 +21,6 @@ When('a is multiplied to b', function () {
     this.result = bc(expression);
 });
 
-Then('I should get 90', function () {
+Then('I should get ninty', function () {
     assert.strictEqual(this.result, 90);
 });
