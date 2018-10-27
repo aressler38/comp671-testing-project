@@ -6,12 +6,12 @@ const {bc} = require('../../src/bc.js');
 
 
 
-Given('a is {int}', function () {
-    this.a = int;
+Given('a is 1', function () {
+    this.a = 1;
 });
 
-Given('b is {int}', function (int) {
-    this.b = int;
+Given('b is 90', function () {
+    this.b = 90;
 });
 
 When('a is multiplied to b', function () {
@@ -21,6 +21,6 @@ When('a is multiplied to b', function () {
     this.result = bc(expression);
 });
 
-Then('I should get {int}', function (int) {
-    assert.strictEqual(this.result, int);
+Then('I should get 90', function () {
+    assert.strictEqual(this.result, 90);
 });
