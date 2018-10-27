@@ -4,5 +4,5 @@ Feature: Multiplication is handled properly
     Scenario: Multiplication Identity
         Given a is zero
         Given b is 99
-        When a is multiply to b
+        When a is multiplied to b
         Then I should get 0
