@@ -6,7 +6,7 @@ const {bc} = require('../../src/bc.js');
 
 
 
-Given('For subtraction, a is 100', function () {
+Given('a is 100', function () {
     this.a = 100;
 });
 

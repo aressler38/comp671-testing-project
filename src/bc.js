@@ -14,7 +14,11 @@ module.exports = {
  * @param {string} expression - A math expression to evaluate
  */
 function bc (expression) {
-    const buffer = execSync('bc', {input: expression + '\n'});
+    const buffer = execSync('bc', {input: 'scale=2; ' + expression + '\n'});
+		if (buffer == '') {
+			console.log("Invalid expression: " + expression)
+			return "invalid expression"
+		}
     const result = buffer.toString().trim();
     const parsed = Number(result);
     if (Number.isNaN(parsed)) {
