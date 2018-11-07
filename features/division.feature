@@ -9,5 +9,5 @@ Feature: Division is handled properly
 
       Examples:
         |   a    |  b    |   total             |
-	| '100'  | '-5'  |   '-20'             |
-	| '20'   | '0'   | 'invalid expression'|
+        | '100'  | '-5'  |   '-20'             |
+        | '20'   | '0'   | 'invalid expression'|

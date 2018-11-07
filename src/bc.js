@@ -1,4 +1,4 @@
-const {execSync} = require('child_process');
+const {spawnSync} = require('child_process');
 
 module.exports = {
     bc,
@@ -14,12 +14,15 @@ module.exports = {
  * @param {string} expression - A math expression to evaluate
  */
 function bc (expression) {
-    const buffer = execSync('bc', {input: 'scale=2; ' + expression + '\n'});
-		if (buffer == '') {
-			console.log("Invalid expression: " + expression)
-			return "invalid expression"
-		}
-    const result = buffer.toString().trim();
+    const process = spawnSync('bc', {input: 'scale=2; ' + expression + '\n'});
+
+    const error = process.stderr.toString();
+    if (error) {
+        console.error('Invalid expression: ' + expression);
+        console.error(error);
+        return 'invalid expression';
+    }
+    const result = process.stdout.toString().trim();
     const parsed = Number(result);
     if (Number.isNaN(parsed)) {
         return result;
