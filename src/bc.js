@@ -15,17 +15,20 @@ module.exports = {
  */
 function bc (expression) {
     const process = spawnSync('bc', {input: 'scale=2; ' + expression + '\n'});
-
     const error = process.stderr.toString();
+    
     if (error) {
         console.error('Invalid expression: ' + expression);
         console.error(error);
         return 'invalid expression';
     }
+
     const result = process.stdout.toString().trim();
     const parsed = Number(result);
+
     if (Number.isNaN(parsed)) {
         return result;
     }
+
     return parsed;
 }
